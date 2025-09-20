@@ -1,0 +1,315 @@
+/* ==============================
+   Global Styles
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Smooth scroll globally */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #0f2027,
+    #203a43,
+    #2c5364
+  ); /* Dark Blue Gradient */
+  color: #e0e6ed;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #4facfe;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #00f2fe;
+}
+
+/* ==============================
+   Header
+================================= */
+header {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #e0e6ed;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #00f2fe;
+  text-shadow: 0px 0px 8px #00f2fe;
+}
+
+/* ==============================
+   Hero Section
+================================= */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a2a6c, #16222a);
+  animation: fadeIn 1.2s ease-in-out;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 0px 0px 12px rgba(0, 242, 254, 0.6);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #cfd9df;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ==============================
+   Blog Cards
+================================= */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.blog-card {
+  background: linear-gradient(145deg, #141e30, #243b55);
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0px 15px 40px rgba(0, 242, 254, 0.3);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  margin: 15px;
+  color: #fff;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  margin: 0 15px 20px;
+  color: #aebacb;
+}
+
+/* ==============================
+   Glowing Buttons
+================================= */
+button,
+.btn {
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: #111;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  box-shadow: 0px 0px 15px rgba(0, 242, 254, 0.6);
+}
+
+button:hover,
+.btn:hover {
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  color: #fff;
+  transform: scale(1.07);
+  box-shadow: 0px 0px 25px rgba(79, 172, 254, 0.9);
+}
+
+/* ==============================
+   Contact Us
+================================= */
+.contact {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0px 0px 8px #00f2fe;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.6);
+  animation: slideUp 1.2s ease;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  box-shadow: 0px 0px 12px #00f2fe;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #aebacb;
+}
+
+.contact button {
+  margin-top: 15px;
+}
+
+/* ==============================
+   Footer
+================================= */
+footer {
+  background: #141e30;
+  padding: 25px 20px;
+  text-align: center;
+  color: #d6e0f0;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+footer a {
+  color: #00f2fe;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  text-shadow: 0px 0px 6px #00f2fe;
+}
+
+/* ==============================
+   Animations
+================================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Make body a flex container */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ensure content pushes footer down */
+main {
+  flex: 1;
+}
+
+/* Footer styling */
+footer {
+  background: #141e30;
+  padding: 25px 20px;
+  text-align: center;
+  color: #d6e0f0;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
